@@ -5,7 +5,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 app = Flask(__name__)
 english_bot = ChatBot("Chatterbot", storage_adapter = 'chatterbot.storage.SQLStorageAdapter')
 trainer = ChatterBotCorpusTrainer(english_bot)
-
+chatbot = ChatBot('Training Example')
 @app.route("/")
 def home():
     return render_template("index.html")

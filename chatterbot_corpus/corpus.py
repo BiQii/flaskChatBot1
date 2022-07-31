@@ -1,7 +1,7 @@
 import os
 import io
 import glob
-import yaml
+import pyyaml
 
 
 DIALOG_MAXIMUM_CHARACTER_LENGTH = 400
@@ -55,7 +55,7 @@ def read_corpus(file_name):
     Read and return the data from a corpus json file.
     """
     with io.open(file_name, encoding='utf-8') as data_file:
-        return yaml.load(data_file)
+        return pyyaml.load(data_file)
 
 
 def list_corpus_files(dotted_path):
